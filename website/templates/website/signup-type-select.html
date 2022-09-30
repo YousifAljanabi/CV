@@ -1,0 +1,66 @@
+{% extends 'website/layout.html' %} {% load static %}{% block navbar %}
+<div
+  class="container flex flex-wrap justify-center items-center mx-auto px-36 py-6"
+>
+  <a href="/" class="flex items-center">
+    <img
+      src="{% static '/images/logo.png' %}"
+      class="mr-3 h-6 sm:h-12"
+      alt="My image"
+    />
+    <span
+      class="self-center text-xl font-inter whitespace-nowrap dark:text-[#1da1f2]"
+      >JobSpot</span
+    >
+  </a>
+</div>
+{% endblock navbar %} {% block body %}
+<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto mb-8">
+  <div class="py-6">
+    <h1
+      class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl flex justify-center"
+    >
+      Sign up
+    </h1>
+    <p class="text-sm text-gray-500">
+      What do you want to use Jobspot.com for?
+    </p>
+  </div>
+  <div class="grid grid-cols-2 text-center">
+    <div class="p-6">
+        <a
+      href="{% url 'createSeeker' %}"
+      class="block p-6 max-w-sm bg-white rounded-lg border border-gray-300 hover:bg-indigo-400 hover:text-gray-100 "
+    >
+      <h5
+        class="mb-2 text-2xl font-bold tracking-tight text-center"
+      >
+        Job Seekers
+      </h5>
+      <p class="text-sm">
+        I want to find a new job or get a better job, and engage with trusted recruiters in order to get recruited                          
+      </p>
+    </a>
+    </div>
+    <div class="p-6">
+        <a
+      href="{% url 'createEmployer' %}"
+      class="block p-6 max-w-sm bg-white rounded-lg border border-gray-300 hover:bg-indigo-400 hover:text-gray-100"
+    >
+      <h5
+        class="mb-2 text-2xl font-bold tracking-tight text-center"
+      >
+        Employers
+      </h5>
+      <p class="text-sm">
+        I want to build my talent pipeline, or connect with the right on-demand recruiters to help me hire quickly
+
+      </p>
+    </a>
+    </div>
+</div>
+
+{% endblock body %} 
+{% block footer %} 
+
+{% endblock footer %}

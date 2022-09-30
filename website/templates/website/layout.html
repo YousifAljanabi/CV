@@ -1,0 +1,129 @@
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}JobSpot{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/layout.css' %}">
+    {% block link %}{% endblock link %}
+    {% block script %}{% endblock %}
+    {% tailwind_css %}
+</head>
+<body class="font-inter">
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
+        {% block navbar %}
+        <div class="container flex flex-wrap justify-between items-center mx-auto px-36">
+            <a href="/" class="flex items-center">
+                <img src="{% static '/images/logo.png' %}" class="mr-3 h-6 sm:h-9" alt="My image">
+                <span class="self-center text-xl font-inter whitespace-nowrap dark:text-[#1da1f2]">JobSpot</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full md:inline md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+                    <li>
+                        <a href="#" class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0" aria-current="page">
+                            Find Jobs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            People
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            Education
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden w-full md:inline md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+                    <li>
+                        <a href="{% url 'login' %}" class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0" aria-current="page">
+                            Sign in
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'signup' %}" class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0 flex items-center" aria-current="page">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9614 11.264L14.5222 9.68592L15.4613 7.98344C15.6878 7.55833 15.8065 7.08517 15.8071 6.60467V3.90578C15.809 3.1469 15.5867 2.404 15.1676 1.7683C14.7484 1.1326 14.1507 0.63177 13.4477 0.327312C12.7447 0.0228547 11.9671 -0.0719768 11.2103 0.0544624C10.4536 0.180902 9.75063 0.523107 9.18784 1.03906L10.0123 1.91909C10.4023 1.56256 10.889 1.3263 11.4127 1.23927C11.9365 1.15223 12.4746 1.21822 12.961 1.42913C13.4474 1.64004 13.861 1.98671 14.1511 2.42663C14.4411 2.86655 14.5951 3.38061 14.594 3.90578V6.60467C14.5939 6.88447 14.5261 7.16017 14.3963 7.4088L12.9211 10.0833L16.2972 12.2676C16.5201 12.4119 16.7029 12.6089 16.8292 12.8407C16.9555 13.0726 17.0211 13.332 17.0202 13.5954V15.601H14.2908V16.8005H18.2333V13.5953C18.2346 13.1327 18.1188 12.6772 17.8967 12.27C17.6746 11.8629 17.3531 11.5171 16.9614 11.264Z" fill="black"/>
+                                <path d="M11.5024 12.4636L9.06324 10.8855L10.0024 9.183C10.2289 8.75789 10.3476 8.28474 10.3482 7.80423V5.10534C10.3474 4.07084 9.93165 3.0789 9.19216 2.34712C8.45267 1.61534 7.44981 1.20348 6.4036 1.2019C4.23075 1.2019 2.46305 2.953 2.46305 5.10534V7.80423C2.46073 8.28452 2.57811 8.75796 2.8048 9.18273L3.74904 10.8944L1.32402 12.4636C0.932803 12.7162 0.611576 13.0614 0.389492 13.468C0.167408 13.8745 0.0514978 14.3294 0.0522798 14.7914L0.0333252 18.0001H12.7744V14.7949C12.7756 14.3323 12.6599 13.8767 12.4377 13.4696C12.2156 13.0624 11.8941 12.7166 11.5024 12.4636ZM11.5613 16.8006H1.25347L1.26523 14.7949C1.26431 14.5315 1.32997 14.2721 1.45625 14.0403C1.58252 13.8084 1.7654 13.6114 1.98827 13.4672L5.35014 11.292L3.86974 8.60836C3.74141 8.35937 3.67504 8.08369 3.67614 7.80423V5.10534C3.67614 4.38954 3.96371 3.70307 4.47558 3.19693C4.98746 2.69079 5.68171 2.40644 6.40561 2.40644C7.12951 2.40644 7.82376 2.69079 8.33564 3.19693C8.84751 3.70307 9.13508 4.38954 9.13508 5.10534V7.80423C9.13496 8.08403 9.06718 8.35974 8.93738 8.60836L7.4621 11.2828L10.8382 13.4672C11.0611 13.6114 11.244 13.8084 11.3702 14.0403C11.4965 14.2722 11.5622 14.5316 11.5613 14.7949V16.8006Z" fill="black"/>
+                                </svg>
+                                
+                            Join now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        {% endblock navbar %}
+
+    </nav>
+        {% block body %}
+
+        {% endblock body %}
+    {% block footer %}
+    <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
+        <div class="hidden w-full md:flex justify-between md:w-screen px-36">
+            <ul class="flex flex-col font-inter p-4 mt-4 text-[#8083A3] font-bold rounded-lg border border-gray-100 md:flex-row md:space-x-8 text-xs">
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 rounded md:bg-transparent md:p-0" aria-current="page">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 rounded md:border-0 md:p-0">
+                        License
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 rounded md:border-0 md:p-0">
+                        API
+                    </a>
+                </li>
+                <li>
+                    <span class="text-xs sm:text-center dark:text-gray-400">
+                        © 2022 
+                        <a href="https://flowbite.com/" class="hover:underline">
+                            Jobspot™
+                        </a>
+                        . All Rights Reserved.
+                    </span>
+                </li>
+            </ul>
+            <ul class="flex flex-col font-inter p-4 mt-4 text-black font-bold rounded-lg border border-gray-100 md:flex-row md:space-x-8 text-xs">
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 rounded md:border-0 md:p-0">
+                        Currency
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 rounded md:border-0 md:p-0">
+                        English
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </footer>
+    {% endblock footer %}
+    
+</body>
+</html>
