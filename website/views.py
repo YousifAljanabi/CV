@@ -74,3 +74,8 @@ def createAccount(request):
     #     return HttpResponseRedirect(reverse("index"))
     # else:
         return render(request, "website/signup.html")
+
+
+
+def jobDetails(request):
+    return render(request, "website/job.html")
