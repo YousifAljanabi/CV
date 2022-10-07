@@ -10,5 +10,7 @@ urlpatterns = [
     path('signup/employer', views.createEmployer, name="createEmployer"),
     path('createAccount', views.createAccount, name="createAccount"),
     path('jobDetails', views.jobDetails, name="jobDetails"),
+    path('companyProfile', views.companyProfile, name="companyProfile"),
+
 
 ]

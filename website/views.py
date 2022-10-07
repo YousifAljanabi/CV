@@ -79,3 +79,7 @@ def createAccount(request):
 
 def jobDetails(request):
     return render(request, "website/job.html")
+
+
+def companyProfile(request):
+    return render(request, "website/company_profile.html")

@@ -1,0 +1,244 @@
+{% extends 'website/layout.html' %} {% load static %} {% block body %}
+
+<div class="container flex flex-wrap justify-center px-60 py-8">
+  <div class="relative mx-auto">
+    <img src="{% static 'images/1024x312.png' %}" alt="" />
+    <img
+      src="{% static 'images/dropbox.png' %}"
+      alt=""
+      class="absolute top-64"
+      style="right:470px ;"
+      
+    />
+    {% comment %} TODO {% endcomment %}
+  </div>
+  <div class="text-center pt-20 w-full">
+    <h1 class="font-bold text-3xl">Dropbox</h1>
+    <h2>On a mission to make your working life simpler</h2>
+    <p class="text-[#8083A3] text-sm">Los Angeles, USA ● Computer Software</p>
+  </div>
+  <ul
+    class="flex flex-col p-4 rounded-lg border border-gray-100 md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0"
+  >
+    <li class="border border-gray-100 py-3 px-8 rounded-2xl">
+      <a
+        href="#"
+        class="font-bold block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0"
+        aria-current="page"
+      >
+        Home
+      </a>
+    </li>
+    <li class="py-3 px-8 rounded-2xl">
+      <a
+        href="#"
+        class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+      >
+        About
+      </a>
+    </li>
+    <li class="py-3 px-8 rounded-2xl">
+      <a
+        href="#"
+        class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+      >
+        Jobs
+      </a>
+    </li>
+    <li class="py-3 px-8 rounded-2xl">
+      <a
+        href="#"
+        class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+      >
+        People
+      </a>
+    </li>
+    <li class="py-3 px-8 rounded-2xl">
+      <a
+        href="#"
+        class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+      >
+        Update
+      </a>
+    </li>
+    <li class="py-3 px-8 rounded-2xl">
+      <a
+        href="#"
+        class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+      >
+        Events
+      </a>
+    </li>
+  </ul>
+  <h2 class="w-full font-bold text-xl">Latest jobs</h2>
+  <div class="container py-8">
+    <div class="grid grid-cols-2 gap-4 px-8">
+      <div class="w-full">
+        <ul class="divide-y">
+          <li class="py-6 pl-3">
+            <h2 class="text-sm font-bold">Crisis Intervention Specialist</h2>
+            <div class="text-sm text-[#8083A3] inline">
+              <p class="inline">London</p>
+              <p class="inline">•</p>
+              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">•</p>
+              <p class="inline">Full-Time</p>
+            </div>
+          </li>
+          <li class="py-6 pl-3">
+            <h2 class="text-sm font-bold">Virtual Scheduler</h2>
+            <div class="text-sm text-[#8083A3] inline">
+              <p class="inline">New York</p>
+              <p class="inline">•</p>
+              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">•</p>
+              <p class="inline">Remotely</p>
+            </div>
+          </li>
+          <li class="py-6 pl-3">
+            <h2 class="text-sm font-bold">Patient Care Advocate</h2>
+            <div class="text-sm text-[#8083A3] inline">
+              <p class="inline">Washington</p>
+              <p class="inline">•</p>
+              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">•</p>
+              <p class="inline">Full-Time</p>
+            </div>
+          </li>
+          <li class="py-6 pl-3">
+            <h2 class="text-sm font-bold">Personal Assistant</h2>
+            <div class="text-sm text-[#8083A3] inline">
+              <p class="inline">Berlin</p>
+              <p class="inline">•</p>
+              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">•</p>
+              <p class="inline">Remotely</p>
+            </div>
+          </li>
+          <li class="py-6 pl-3">
+            <h2 class="text-sm font-bold">Sales Development Representive</h2>
+            <div class="text-sm text-[#8083A3] inline">
+              <p class="inline">San Francisco</p>
+              <p class="inline">•</p>
+              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">•</p>
+              <p class="inline">Remotely</p>
+            </div>
+          </li>
+          <li class="py-6 pl-3">
+            <h2 class="text-sm font-bold">Food Scientist</h2>
+            <div class="text-sm text-[#8083A3] inline">
+              <p class="inline">San Francisco</p>
+              <p class="inline">•</p>
+              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">•</p>
+              <p class="inline">Remotely</p>
+            </div>
+          </li>
+        </ul>
+        <div class="py-6">
+          <a href="" class="font-bold text-sm py-6">See All</a>
+        </div>
+      </div>
+      <div class="h-full w-full">
+        <div class="px-24">
+          <h1 class="font-bold text-xl">$135,700</h1>
+          <p class="text-sm py-2">Avg. salary</p>
+          <ul>
+            <li class="py-3 pl-3">
+              <h2 class="text-sm font-bold">Software and hardware</h2>
+              <h3 class="text-xs text-[#8083A3]">Industry</h3>
+            </li>
+            <li class="py-3 pl-3">
+              <h2 class="text-sm font-bold">Full-time</h2>
+              <h3 class="text-xs text-[#8083A3]">Employment Type</h3>
+            </li>
+            <li class="py-3 pl-3">
+              <h2 class="text-sm font-bold">Information technology</h2>
+              <h3 class="text-xs text-[#8083A3]">Job Functions</h3>
+            </li>
+            <li class="py-3 pl-3">
+              <h2 class="text-sm font-bold">jobs@microsoft.com</h2>
+              <h3 class="text-xs text-[#8083A3]">Contact Email</h3>
+            </li>
+          </ul>
+          <p class="text-sm text-[#8083A3] py-6">
+            My new car is sexy. Melbourne Red color, interior is nice.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="py-6">
+      <h1 class="text-xl font-bold w-full">About company</h1>
+      <div>
+        <div class="align-middle py-6">
+          <h2 class="w-full font-bold text-sm">Dropbox</h2>
+          <p class="text-[#8083A3] text-xs">14,056,752 followers</p>
+        </div>
+      </div>
+
+      <p class="text-sm">
+        TheSoul Publishing is an award-winning digital studio that produces
+        entertaining, positive and original content for a global audience. One
+        of the world’s most prolific and popular online media companies, TheSoul
+        Publishing reaches over 1 billion social followers across Facebook,
+        Instagram, TikTok, YouTube, Pinterest, and Snap.
+      </p>
+      <h1 class="text-sm font-bold w-full py-8">Latest Activity</h1>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="pb-1.5">
+          <h5 class="inline text-xs font-bold">Dropbox</h5>
+
+          <a
+            href="#"
+            class="flex flex-col items-center rounded-lg border shadow-md md:flex-row md:max-w-xl"
+          >
+            <img
+              class="rounded-lg"
+              src="{% static 'images/177x104.png' %}"
+              alt=""
+            />
+            <div class="flex flex-col justify-between p-2 pl-3 leading-normal">
+              <h5 class="mb-2 text-sm font-bold tracking-tight">
+                How do I cancel my reservation for a to stay?
+              </h5>
+              <p
+                class="mb-3 text-xs font-normal text-gray-700 dark:text-gray-400"
+              >
+                You can cancel a reservation any time before or during your
+                trip.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="pb-1.5">
+            <h5 class="inline text-xs font-bold">Dropbox</h5>
+  
+            <a
+              href="#"
+              class="flex flex-col items-center rounded-lg border shadow-md md:flex-row md:max-w-xl"
+            >
+              <img
+                class="rounded-lg"
+                src="{% static 'images/177x104.png' %}"
+                alt=""
+              />
+              <div class="flex flex-col justify-between p-2 pl-3 leading-normal">
+                <h5 class="mb-2 text-sm font-bold tracking-tight">
+                  How do I cancel my reservation for a to stay?
+                </h5>
+                <p
+                  class="mb-3 text-xs font-normal text-gray-700 dark:text-gray-400"
+                >
+                  You can cancel a reservation any time before or during your
+                  trip.
+                </p>
+              </div>
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock body %}
+</div>
