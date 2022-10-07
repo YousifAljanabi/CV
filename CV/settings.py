@@ -35,6 +35,7 @@ NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 # Application definition
 
 INSTALLED_APPS = [
+    "heroicons",
     'django_browser_reload',
     'theme',
     'tailwind',
