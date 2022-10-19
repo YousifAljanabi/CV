@@ -7,7 +7,7 @@ from django.db import IntegrityError
 
 
 def index(request):
-    return render(request, "website/index.html",)
+    return render(request, "website/landing_page.html")
 
 
 def login(request):
@@ -83,3 +83,5 @@ def jobDetails(request):
 
 def companyProfile(request):
     return render(request, "website/company_profile.html")
+
+
