@@ -1,166 +1,166 @@
 {% extends 'website/layout.html' %} {% load static %}{% block navbar %}
-<div
-  class="container flex flex-wrap justify-center items-center mx-auto px-36 py-6"
->
-  <a href="/" class="flex items-center">
-    <img
-      src="{% static '/images/logo.png' %}"
-      class="mr-3 h-6 sm:h-12"
-      alt="My image"
-    />
-    <span
-      class="self-center text-xl font-inter whitespace-nowrap dark:text-[#1da1f2]"
-      >JobSpot</span
+    <div
+            class="container flex flex-wrap justify-center items-center mx-auto px-36 py-6"
     >
-  </a>
-</div>
-{% endblock navbar %} 
-{% block body %}
-<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto">
-  <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
-    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-      <h1
-        class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl flex justify-center"
-      >
-        Sign up
-      </h1>
-      <form
-        class="space-y-4 md:space-y-6"
-        action="{% url 'createAccount' %}"
-        method="POST"
-      >
-        {% csrf_token %}
-        <div id="form-details">
-          <label for="email" class="block mb-2 text-sm font-medium"
-            >Your email</label
-          >
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
-            placeholder="name@company.com"
-            required=""
-          />
-            
-              
-            </div>
-          <label for="name" class="block mb-2 text-sm font-medium"
-            >Full Name</label
-          >
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
-            placeholder="Full name"
-            required=""
-          />
-          <label for="username" class="block mb-2 text-sm font-medium"
-            >Username</label
-          >
-          <input
-            type="text"
-            name="username"
-            id="username"
-            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
-            placeholder="Username"
-            required=""
-          />
-          <label for="phone" class="block mb-2 text-sm font-medium"
-            >Phone Number</label
-          >
-          <input
-            type="text"
-            name="phone"
-            id="phone"
-            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
-            placeholder="phone"
-            required=""
-          />
-          <label for="password" class="block mb-2 text-sm font-medium"
-            >Password</label
-          >
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
-            placeholder="Create your password"
-            required=""
-          />
-          <label for="passCheck" class="block mb-2 text-sm font-medium"
-            >Password</label
-          >
-          <input
-            type="password"
-            name="confirmation"
-            id="confirmation"
-            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
-            placeholder="Re-enter your password"
-            required=""
-          />
-        </div>
-        <div class="flex items-start">
-          <div class="flex items-center">
-            <input
-              id="remember"
-              aria-describedby="remember"
-              type="checkbox"
-              class="w-4 h-4 border border-gray-300 rounded focus:ring-primary-300 dark:border-gray-600"
-              required=""
-            />
-          </div>
-          <div class="ml-3 text-xs text-[#8083A3]">
-            <label for="remember">I agree with the terms and conditions</label>
-          </div>
-        </div>
-        <button
-          type="submit"
-          class="w-full font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-[#1DA1F2] text-white"
-        >
-          Sign Up
-        </button>
-      </form>
-      <div
-        class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
-      >
-        <p class="text-center text-gray-400 font-light mx-4 mb-0">Or</p>
-      </div>
-      <div class="py-3">
-        <a href="" class="text-[#8083A3]">
-          <div class="flex items-center justify-center">
+        <a href="/" class="flex items-center">
             <img
-              src="{% static 'icons/google.png' %}"
-              class="flex-start h-5 w-5"
-              alt=""
+                    src="{% static '/images/logo.png' %}"
+                    class="mr-3 h-6 sm:h-12"
+                    alt="My image"
             />
-            <p>Sign up with Google</p>
-          </div>
+            <span
+                    class="self-center text-xl font-inter whitespace-nowrap dark:text-[#1da1f2]"
+            >JobSpot</span
+            >
         </a>
-      </div>
-      <div class="py-3">
-        <a href="" class="text-[#8083A3]">
-          <div class="flex items-center justify-center">
-            <img
-              src="{% static 'icons/facebook.png' %}"
-              class="flex-start h-5 w-5"
-              alt=""
-            />
-            <p>Sign up with Facebook</p>
-          </div>
-        </a>
-      </div>
-      <div class="flex justify-around py-8 text-sm">
-        <p class="font-light text-gray-500 dark:text-gray-400">
-          you have an account?
-        </p>
-        <a href="#" class="font-medium text-[#8083A3] hover:underline"
-          >Sign in</a
-        >
-      </div>
     </div>
-  </div>
-</div>
+{% endblock navbar %}
+{% block body %}
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto">
+        <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1
+                        class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl flex justify-center"
+                >
+                    Sign up
+                </h1>
+                <form
+                        class="space-y-4 md:space-y-6"
+                        action="{% url 'createAccount' %}"
+                        method="POST"
+                >
+                    {% csrf_token %}
+                    <div id="form-details">
+                        <label for="email" class="block mb-2 text-sm font-medium"
+                        >Your email</label
+                        >
+                        <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
+                                placeholder="name@company.com"
+                                required=""
+                        />
+
+
+                    </div>
+                    <label for="name" class="block mb-2 text-sm font-medium"
+                    >Full Name</label
+                    >
+                    <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
+                            placeholder="Full name"
+                            required=""
+                    />
+                    <label for="username" class="block mb-2 text-sm font-medium"
+                    >Username</label
+                    >
+                    <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
+                            placeholder="Username"
+                            required=""
+                    />
+                    <label for="phone" class="block mb-2 text-sm font-medium"
+                    >Phone Number</label
+                    >
+                    <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
+                            placeholder="phone"
+                            required=""
+                    />
+                    <label for="password" class="block mb-2 text-sm font-medium"
+                    >Password</label
+                    >
+                    <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
+                            placeholder="Create your password"
+                            required=""
+                    />
+                    <label for="passCheck" class="block mb-2 text-sm font-medium"
+                    >Password</label
+                    >
+                    <input
+                            type="password"
+                            name="confirmation"
+                            id="confirmation"
+                            class="border border-white sm:text-sm rounded-lg block w-full p-2.5"
+                            placeholder="Re-enter your password"
+                            required=""
+                    />
+            </div>
+            <div class="flex items-start">
+                <div class="flex items-center">
+                    <input
+                            id="remember"
+                            aria-describedby="remember"
+                            type="checkbox"
+                            class="w-4 h-4 border border-gray-300 rounded focus:ring-primary-300 dark:border-gray-600"
+                            required=""
+                    />
+                </div>
+                <div class="ml-3 text-xs text-[#8083A3]">
+                    <label for="remember">I agree with the terms and conditions</label>
+                </div>
+            </div>
+            <button
+                    type="submit"
+                    class="w-full font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-[#1DA1F2] text-white"
+            >
+                Sign Up
+            </button>
+            </form>
+            <div
+                    class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
+            >
+                <p class="text-center text-gray-400 font-light mx-4 mb-0">Or</p>
+            </div>
+            <div class="py-3">
+                <a href="" class="text-[#8083A3]">
+                    <div class="flex items-center justify-center">
+                        <img
+                                src="{% static 'icons/google.png' %}"
+                                class="flex-start h-5 w-5"
+                                alt=""
+                        />
+                        <p>Sign up with Google</p>
+                    </div>
+                </a>
+            </div>
+            <div class="py-3">
+                <a href="" class="text-[#8083A3]">
+                    <div class="flex items-center justify-center">
+                        <img
+                                src="{% static 'icons/facebook.png' %}"
+                                class="flex-start h-5 w-5"
+                                alt=""
+                        />
+                        <p>Sign up with Facebook</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-around py-8 text-sm">
+                <p class="font-light text-gray-500 dark:text-gray-400">
+                    you have an account?
+                </p>
+                <a href="#" class="font-medium text-[#8083A3] hover:underline"
+                >Sign in</a
+                >
+            </div>
+        </div>
+    </div>
+    </div>
 
 {% endblock body %} {% block footer %} {% endblock footer %}
