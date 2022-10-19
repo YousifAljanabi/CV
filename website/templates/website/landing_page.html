@@ -1,0 +1,216 @@
+{% extends 'website/layout.html' %} {% load static %} {% load heroicons %}
+{%block body %}
+<div class="flex flex-wrap justify-center px-60 py-8">
+  <div class="relative text-center text-white">
+    <img src="{% static 'images/bitmap_landing.png' %}" alt="" />
+    <div class="absolute top-12 w-full">
+      <h1 class="font-bold text-6xl">We Always Have A Job!</h1>
+      <p class="pt-4">
+        When you’re searching for a job, there are a few things you can do
+      </p>
+      <p>to get the most out of your search</p>
+    </div>
+    
+  </div>
+  <div class="relative w-full pt-6">
+    <div class="absolute bottom-0 flex w-full items-center justify-center">
+      <form action="" class="max-w-2xl w-full flex justify-center items-center border rounded-3xl" style="background: rgb(255, 255, 255);">
+        {% csrf_token %}
+        <button type="sumbit" class=""
+        style="padding-left:8px;"
+        >
+          <img src="{% static 'images/search.png' %}" alt="">
+        </button>
+        <input type="text" placeholder="Job title, keyword or company" 
+          class="outline-0 border-0 text-sm font-bold text-[#8083A3] w-full" 
+          style="outline: none; 
+          border: 0; 
+          flex:1; 
+          background: transparent;
+          padding: 18px 18px;
+          ">
+        <h1 class="font-bold text-sm pr-10">Any Location</h1>
+      </form>
+    </div>
+  </div>
+  <div class="w-full text-center pt-4 inline text-sm text-[#8083A3]">
+    <p class="inline">You can also</p>
+    <a class="font-bold text-black" href="">Post a job</a>
+    <p class="inline">or</p>
+    <a class="font-bold text-black" href="">Post you resume</a>
+  </div>
+  <div class="pt-20 w-full px-24">
+    <div class="grid grid-cols-2 w-full items-center">
+      <div class="w-full font-bold text-3xl">
+        <h1>Trending jobs near you</h1>
+      </div>
+      <div
+        class="w-full font-bold text-sm text-right items-center"
+        style="text-align: right"
+      >
+        <a href="">See all jobs</a>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-4 py-14">
+      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
+        <img
+          src="{% static 'images/dropbox.png' %}"
+          alt=""
+          style="height: 64px; width: 64px"
+        />
+        <a href="#">
+          <h5 class="mb-2 font-bold">Crisis Invervantion Specialist</h5>
+        </a>
+        <p class="mb-3 text-sm text-gray-500 inline">London</p>
+        <p class="mb-3 text-sm text-gray-500 inline">•</p>
+        <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
+        <h4 class="py-8 font-bold text-sm items-center px-6">
+          $50k - $55k per month
+        </h4>
+      </div>
+      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
+        <img
+          src="{% static 'images/dropbox.png' %}"
+          alt=""
+          style="height: 64px; width: 64px"
+        />
+        <a href="#">
+          <h5 class="mb-2 font-bold">Crisis Invervantion Specialist</h5>
+        </a>
+        <p class="mb-3 text-sm text-gray-500 inline">London</p>
+        <p class="mb-3 text-sm text-gray-500 inline">•</p>
+        <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
+        <h4 class="py-8 font-bold text-sm items-center px-6">
+          $50k - $55k per month
+        </h4>
+      </div>
+      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
+        <img
+          src="{% static 'images/dropbox.png' %}"
+          alt=""
+          style="height: 64px; width: 64px"
+        />
+        <a href="#">
+          <h5 class="mb-2 font-bold">Crisis Invervantion Specialist</h5>
+        </a>
+        <p class="mb-3 text-sm text-gray-500 inline">London</p>
+        <p class="mb-3 text-sm text-gray-500 inline">•</p>
+        <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
+        <h4 class="py-8 font-bold text-sm items-center px-6">
+          $50k - $55k per month
+        </h4>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 w-full items-center">
+      <div class="w-full font-bold text-3xl">
+        <h1>Top level freelancers</h1>
+      </div>
+      <div
+        class="w-full font-bold text-sm text-right items-center"
+        style="text-align: right"
+      >
+        {% comment "todo arrows" %}{% endcomment %}
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-4 py-14">
+      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
+        <img
+          src="{% static 'images/dropbox.png' %}"
+          alt=""
+          style="height: 64px; width: 64px"
+        />
+        <a href="#">
+          <h5 class="mb-2 font-bold">Tamas Bunce</h5>
+        </a>
+        <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
+        <p class="mb-3 text-sm text-gray-500 inline">•</p>
+        <p class="mb-3 text-sm text-gray-500 inline">Construction Manager</p>
+        
+      </div>
+      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
+        <img
+          src="{% static 'images/dropbox.png' %}"
+          alt=""
+          style="height: 64px; width: 64px"
+        />
+        <a href="#">
+          <h5 class="mb-2 font-bold">Benedikt Safiyuulin</h5>
+        </a>
+        <p class="mb-3 text-sm text-gray-500 inline">Google inc.</p>
+        <p class="mb-3 text-sm text-gray-500 inline">•</p>
+        <p class="mb-3 text-sm text-gray-500 inline">Fitness Trainer</p>
+        
+      </div>
+      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
+        <img
+          src="{% static 'images/dropbox.png' %}"
+          alt=""
+          style="height: 64px; width: 64px"
+        />
+        <a href="#">
+          <h5 class="mb-2 font-bold">Luis Calvillo</h5>
+        </a>
+        <p class="mb-3 text-sm text-gray-500 inline">Recources Inc.</p>
+        <p class="mb-3 text-sm text-gray-500 inline">•</p>
+        <p class="mb-3 text-sm text-gray-500 inline">Teacher Assistant</p>
+      </div>
+    </div>
+
+
+
+
+    <div class="px-16 flex justify-center">
+
+
+      <div class="grid grid-cols-2 gap-4 py-14">
+        <div class="w-full">
+          <div class="grid grid-rows-3 grid-flow-col gap-4">
+            <img src="{% static 'images/quote.png' %}" alt="">
+            <h1 class="font-bold text-2xl">Jobspot platform is so easy to use. 
+              We’ve hired about 40-50 people</h1>
+            <div>
+              <h4 class="font-bold text-sm">Lubosek Hnilo</h4>
+              <p class="text-sm text-gray-400">Founder at Apple Inc.</p>
+            </div>
+          </div>
+        </div>
+        <div class="items-center px-24">
+          <img src="{% static 'images/229x229.png' %}" alt="">
+        </div>
+      </div>
+
+
+      
+    </div>
+    
+
+    <div class="py-8 relative text-white">
+      <img src="{% static 'images/1140x218bg.png' %}" alt="" class="">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="absolute top-16 w-3/4 pl-20 pt-4">
+          <h1 class="font-bold text-3xl">Ready for you next hire?</h1>
+          <p class="pt-4 text-sm">
+            Along with conventional advertising and below the line activities, organizations and corporate bodies have come to realize that they need to invest.
+          </p>
+        </div>
+        <div class="text-black absolute top-24 right-14 pt-4">
+          <button
+          type="submit"
+          class="w-full font-medium rounded-3xl text-sm px-14 py-3 text-center bg-[#1DA1F2] text-white"
+        >
+          Start Today
+        </button>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock body %}

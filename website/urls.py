@@ -12,5 +12,5 @@ urlpatterns = [
     path('signup/employer', views.create_employer, name="create_employer"),
     path('create_account', views.create_account, name="create_account"),
     path('job_details', views.job_details, name="job_details"),
-
+    path('companyProfile', views.companyProfile, name="companyProfile"),
 ]

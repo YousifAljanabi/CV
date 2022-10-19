@@ -12,7 +12,7 @@ SIGNUP_PAGE = "website/signup.html"
 
 
 def index(request):
-    return render(request, "website/index.html", )
+    return render(request, "website/landing_page.html")
 
 
 def user_login(request):
