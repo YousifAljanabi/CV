@@ -5,7 +5,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('test', csrf_exempt(views.test), name="test"),
     path('login', views.user_login, name="login"),
     path('signup', views.signup, name="signup"),
     path('signup/seeker', views.create_seeker, name="create_seeker"),
@@ -13,4 +12,5 @@ urlpatterns = [
     path('create_account', views.create_account, name="create_account"),
     path('job_details', views.job_details, name="job_details"),
     path('companyProfile', views.companyProfile, name="companyProfile"),
+    path('job_search', views.job_search, name="job_search"),
 ]

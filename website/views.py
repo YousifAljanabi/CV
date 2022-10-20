@@ -82,3 +82,10 @@ def create_account(request):
 
 def job_details(request):
     return render(request, "website/job.html")
+
+def companyProfile(request):
+    return render(request, "website/company_profile.html")
+
+
+def job_search(request):
+    return render(request, "website/job_search.html")
