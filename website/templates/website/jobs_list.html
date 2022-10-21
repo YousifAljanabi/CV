@@ -1,0 +1,210 @@
+{% extends 'website/layout.html' %} {% load static %} {% block body %}
+<div class="flex flex-wrap justify-center px-60 py-8">
+  <div class="relative text-center text-white">
+    <img src="{% static 'images/968x216bg.png' %}" alt="" />
+    <div class="absolute top-12 w-full">
+      <h1 class="font-bold text-5xl">648 Available Jobs</h1>
+      <p class="pt-4">
+        When you’re searching for a job, there are a few things you can do
+      </p>
+      <p>to get the most out of your search</p>
+    </div>
+  </div>
+  <div class="relative w-full pt-6">
+    <div class="absolute bottom-0 flex w-full items-center justify-center">
+      <form
+        action=""
+        class="max-w-2xl w-full flex justify-center items-center border rounded-3xl"
+        style="background: rgb(255, 255, 255)"
+      >
+        {% csrf_token %}
+        <button type="sumbit" class="" style="padding-left: 8px">
+          <img src="{% static 'images/search.png' %}" alt="" />
+        </button>
+        <input
+          type="text"
+          placeholder="Job title, keyword or company"
+          class="outline-0 border-0 text-sm font-bold text-[#8083A3] w-full"
+          style="
+            outline: none;
+            border: 0;
+            flex: 1;
+            background: transparent;
+            padding: 18px 18px;
+          "
+        />
+        <h1 class="font-bold text-sm pr-10">Any Location</h1>
+      </form>
+    </div>
+  </div>
+  <div class="w-full px-72 py-6 text-center">
+    <ul class="font-bold text-xs">
+      <a href="">
+        <li class="inline px-8">Date Posted</li>
+      </a>
+      <a href="">
+        <li class="inline px-8">Experience</li>
+      </a>
+      <a href="">
+        <li class="inline px-8">Company</li>
+      </a>
+      <a href="">
+        <li class="inline px-8">Job Type</li>
+      </a>
+    </ul>
+  </div>
+  <div class="px-36">
+    <div class="py-6 px-3">
+      <div class="grid grid-cols-8 gap-4">
+        <div>
+          <img
+            src="{% static 'images/dropbox.png' %}"
+            alt=""
+            style="height: 32px; width: 32px"
+          />
+        </div>
+        <div class="col-span-7">
+          <a href="">
+            <h1 class="text-md font-bold">Patient Care Advocate</h1>
+          </a>
+          <div class="flex justify-between">
+            <div>
+              <p class="mb-3 text-sm inline">London</p>
+              <p class="mb-3 text-sm inline">•</p>
+              <p class="mb-3 text-sm inline">Dropbox</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm">$50-55 hourly</h4>
+            </div>
+          </div>
+          <p class="text-sm text-[#8083A3] py-2">
+            Minimum 3 shifts a week Monday - Friday with the ability to work an
+            8 to 9 hour time each week between the hours of 7 A.M. - 7 P.M.
+          </p>
+          <ul class="text-sm font-bold text-[#8083A3] py-3">
+            <li class="inline px-6">Management</li>
+            <li class="inline px-6">Full-Time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="py-6 px-3">
+      <div class="grid grid-cols-8 gap-4">
+        <div>
+          <img
+            src="{% static 'images/dropbox.png' %}"
+            alt=""
+            style="height: 32px; width: 32px"
+          />
+        </div>
+        <div class="col-span-7">
+          <a href="">
+            <h1 class="text-md font-bold">Virtual Scheduler - Remote</h1>
+          </a>
+          <div class="flex justify-between">
+            <div>
+              <p class="mb-3 text-sm inline">New York</p>
+              <p class="mb-3 text-sm inline">•</p>
+              <p class="mb-3 text-sm inline">Dropbox</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm">$40-48 hourly</h4>
+            </div>
+          </div>
+          <p class="text-sm text-[#8083A3] py-2">
+            Lines for Life also offers a great benefits package valued at over
+            $9,500 that includes full coverage for employee health, dental,
+            vision, short
+          </p>
+          <ul class="text-sm font-bold text-[#8083A3] py-3">
+            <li class="inline px-6">Management</li>
+            <li class="inline px-6">Remote</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="py-6 px-3">
+      <div class="grid grid-cols-8 gap-4">
+        <div>
+          <img
+            src="{% static 'images/dropbox.png' %}"
+            alt=""
+            style="height: 32px; width: 32px"
+          />
+        </div>
+        <div class="col-span-7">
+          <a href="">
+            <h1 class="text-md font-bold">Patient Care Advocate Full-Time</h1>
+          </a>
+          <div class="flex justify-between">
+            <div>
+              <p class="mb-3 text-sm inline">Washington</p>
+              <p class="mb-3 text-sm inline">•</p>
+              <p class="mb-3 text-sm inline">Dropbox</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm">$55-60 hourly</h4>
+            </div>
+          </div>
+          <p class="text-sm text-[#8083A3] py-2">
+            Healthcare Interest — become an expert on emerging healthcare
+            programs and excited to speak with providers about the future of
+            healthcare
+          </p>
+          <ul class="text-sm font-bold text-[#8083A3] py-3">
+            <li class="inline px-6">Management</li>
+            <li class="inline px-6">Remote</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="py-6 px-3">
+      <div class="grid grid-cols-8 gap-4">
+        <div>
+          <img
+            src="{% static 'images/dropbox.png' %}"
+            alt=""
+            style="height: 32px; width: 32px"
+          />
+        </div>
+        <div class="col-span-7">
+          <a href="">
+            <h1 class="text-md font-bold">
+              Workplace Culture Assessment for TataTrusts
+            </h1>
+          </a>
+          <div class="flex justify-between">
+            <div>
+              <p class="mb-3 text-sm inline">London</p>
+              <p class="mb-3 text-sm inline">•</p>
+              <p class="mb-3 text-sm inline">Dropbox</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm">$60-65 hourly</h4>
+            </div>
+          </div>
+          <p class="text-sm text-[#8083A3] py-2">
+            The Admissions Coordinator works under moderate supervision in
+            performing a variety of administrative tasks in support of
+            admissions activities that include
+          </p>
+          <ul class="text-sm font-bold text-[#8083A3] py-3">
+            <li class="inline px-6">Management</li>
+            <li class="inline px-6">Remote</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul class="inline-flex space-x-2 pt-8">
+    <li><button class="w-10 h-10 transition-colors duration-150 ">1</button></li>
+    <li><button class="w-10 h-10 text-white transition-colors duration-150 bg-[#1DA1F2] border border-r-0 border-[#1DA1F2] rounded-full focus:shadow-outline">2</button></li>
+    <li><button class="w-10 h-10 transition-colors duration-150 ">3</button></li>
+    <li><button class="w-10 h-10 transition-colors duration-150 ">4</button></li>
+    <li><button class="w-10 h-10 transition-colors duration-150 ">5</button></li>
+    
+  
+  
+</ul>
+</div>
+{% endblock body %}

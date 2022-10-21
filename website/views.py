@@ -92,3 +92,6 @@ def job_search(request):
 
 def employee_profile(request):
     return render(request, "website/employees_profile.html")
+
+def jobs_list(request):
+    return render(request, "website/jobs_list.html")
