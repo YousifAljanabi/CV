@@ -1,0 +1,346 @@
+{% extends 'website/layout.html' %}{% block navbar %}{% endblock navbar %}
+{%load static %} {% block body %}
+<div class="grid grid-cols-5 gap-4">
+  <div class="px-12 max-w-sm h-full">
+    <img
+      src="{% static 'images/logo.png' %}"
+      alt=""
+      style="height: 40px; width: 40px"
+    />
+    <div class="" style="padding-top: 40px">
+      <ul class="text-[#8083A3] font-bold text-sm">
+        <a href="">
+          <li class="px-12 py-4">Dashboard</li>
+        </a>
+        <li class="font-normal py-4">Employee finder</li>
+        <a href="">
+          <li class="px-12 py-4">Search</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4 text-black">Employees</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Calls</li>
+        </a>
+        <li class="font-normal py-4">Manage listings</li>
+        <a href="">
+          <li class="px-12 py-4">Listings</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Calendar</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Post Updates</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Analytics</li>
+        </a>
+      </ul>
+    </div>
+    <div class="">
+      <ul class="text-[#8083A3] font-bold text-sm">
+        <a href="">
+          <li class="px-12 py-4">Help Center</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Settings</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="col-span-4">
+    <div class="pt-6 px-36 pb-12">
+      <ul class="flex justify-between items-center">
+        <li class="inline">
+          <a href="">
+            <h1 class="font-bold text-sm inline">Back to results</h1>
+          </a>
+        </li>
+        <li class="inline items-center">
+          <button
+            type="submit"
+            class="w-full font-medium rounded-3xl text-sm px-5 py-2.5 text-center bg-[#1DA1F2] text-white"
+          >
+            Post a Job
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="grid grid-cols-10 gap-4 pt-6 px-36 pb-12 items-center">
+      <div>
+        <img src="{% static 'images/84x84.png' %}" alt="" />
+      </div>
+      <div class="col-span-6">
+        <div class="pl-3">
+          <h1 class="font-bold text-2xl">Praskovya Dubinina</h1>
+          <p class="inline">Eliassen Group Inc.</p>
+          <p class="inline"></p>
+          <p class="inline">UI/UX Designer</p>
+        </div>
+      </div>
+      <div class="col-span-3">
+        <ul class="flex justify-around font-bold text-sm">
+          <a href="">
+            <li class="inline">Save</li>
+          </a>
+          <a href="">
+            <li class="inline">Contact</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="px-36">
+      <ul
+        class="flex flex-col p-4 rounded-lg border border-gray-100 md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0"
+      >
+        <li class="border border-gray-100 py-3 px-8 rounded-2xl">
+          <a
+            href="#"
+            class="font-bold block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0"
+            aria-current="page"
+          >
+            About
+          </a>
+        </li>
+        <li class="py-3 px-8 rounded-2xl">
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+          >
+            Work
+          </a>
+        </li>
+        <li class="py-3 px-8 rounded-2xl">
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+          >
+            Experience
+          </a>
+        </li>
+        <li class="py-3 px-8 rounded-2xl">
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 md:p-0 dark:text-gray-400"
+          >
+            Education
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="pl-36 py-12 grid grid-cols-2 gap-4">
+      <div>
+        <div>
+          <h1 class="font-bold text-lg">Short bio</h1>
+          <p class="text-sm py-0.5">
+            Once your resume is on Indeed, you can choose to make it “Public” or
+            “Private.” There are benefits to both options. When you make your
+            resume public, it is visible to anyone. Visitors to a public resume
+            page can forward, save, or download the resume as a PDF or email you
+            through a secure contact form.
+          </p>
+          <ul class="text-[#8083A3] text-sm font-bold py-4">
+            <li class="inline px-6 py-1">Business</li>
+            <li class="inline px-6 py-1">Marketing</li>
+            <li class="inline px-6 py-1">Development</li>
+            <li class="inline px-6 py-1">Founder</li>
+            <li class="inline px-6 py-1">HTML</li>
+            <div class="py-2"></div>
+            <li class="inline px-6 py-1">Interface Design</li>
+            <li class="inline px-6 py-1">University</li>
+            <li class="inline px-6 py-1">Entrepreneur</li>
+          </ul>
+        </div>
+
+        <div class="py-6">
+          <h1 class="font-bold text-lg">Work experience</h1>
+        </div>
+        <div class="py-6 px-3">
+          <div class="grid grid-cols-8 gap-4">
+            <div>
+              <img
+                src="{% static 'images/dropbox.png' %}"
+                alt=""
+                style="height: 32px; width: 32px"
+              />
+            </div>
+            <div class="col-span-7">
+              <a href="">
+                <h1 class="text-md font-bold">
+                  Crisis Intervention Specialist
+                </h1>
+              </a>
+              <div class="flex justify-between">
+                <div>
+                  <p class="mb-3 text-sm inline">London</p>
+                  <p class="mb-3 text-sm inline">•</p>
+                  <p class="mb-3 text-sm inline">Dropbox</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">2018 - Present</h4>
+                </div>
+              </div>
+              <p class="text-sm text-[#8083A3] py-2">
+                Minimum 3 shifts a week Monday - Friday with the ability to work
+                an 8 to 9 hour time each week between the hours of 7 A.M. - 7
+                P.M.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="py-6 px-3">
+          <div class="grid grid-cols-8 gap-4">
+            <div>
+              <img
+                src="{% static 'images/dropbox.png' %}"
+                alt=""
+                style="height: 32px; width: 32px"
+              />
+            </div>
+            <div class="col-span-7">
+              <a href="">
+                <h1 class="text-md font-bold">Virtual Scheduler</h1>
+              </a>
+              <div class="flex justify-between">
+                <div>
+                  <p class="mb-3 text-sm inline">London</p>
+                  <p class="mb-3 text-sm inline">•</p>
+                  <p class="mb-3 text-sm inline">Dropbox</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">2001 - 2018</h4>
+                </div>
+              </div>
+              <p class="text-sm text-[#8083A3] py-2">
+                Lines for Life also offers a great benefits package valued at
+                over $9,500 that includes full coverage for employee health,
+                dental, vision, short
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="py-6 px-3">
+          <div class="grid grid-cols-8 gap-4">
+            <div>
+              <img
+                src="{% static 'images/dropbox.png' %}"
+                alt=""
+                style="height: 32px; width: 32px"
+              />
+            </div>
+            <div class="col-span-7">
+              <a href="">
+                <h1 class="text-md font-bold">Patient Care Advocate</h1>
+              </a>
+              <div class="flex justify-between">
+                <div>
+                  <p class="mb-3 text-sm inline">London</p>
+                  <p class="mb-3 text-sm inline">•</p>
+                  <p class="mb-3 text-sm inline">Dropbox</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">1998 - 2018</h4>
+                </div>
+              </div>
+              <p class="text-sm text-[#8083A3] py-2">
+                Healthcare Interest — become an expert on emerging healthcare
+                programs and excited to speak with providers
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="py-6">
+          <h1 class="font-bold text-lg">Education</h1>
+        </div>
+        <div class="py-6 px-3">
+          <div class="grid grid-cols-8 gap-4">
+            <div>
+              <img
+                src="{% static 'images/harvard.png' %}"
+                alt=""
+                style="height: 32px; width: 32px"
+              />
+            </div>
+            <div class="col-span-7">
+              <a href="">
+                <h1 class="text-md font-bold">Harvard University</h1>
+              </a>
+              <div class="flex justify-between">
+                <div>
+                  <p class="mb-3 text-sm inline">London</p>
+                  <p class="mb-3 text-sm inline">•</p>
+                  <p class="mb-3 text-sm inline">Business Development</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">1994 - 1998</h4>
+                </div>
+              </div>
+              <p class="text-sm text-[#8083A3] py-2">
+                Healthcare Interest — become an expert on emerging healthcare
+                programs and excited to speak with providers about the future of
+                healthcare
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="px-32 py-12">
+          <h1 class="font-bold text-xl">$35,700 — $37,700</h1>
+          <p class="text-sm py-2">Avg. salary</p>
+          <ul>
+            <li class="py-3 pl-3">
+              <h2 class="text-sm font-bold">hoangle@yahoo.com</h2>
+              <h3 class="text-xs text-[#8083A3]">Contact Email</h3>
+            </li>
+            <li class="py-3 pl-3">
+              <h2 class="text-sm font-bold">+64 456 869 393</h2>
+              <h3 class="text-xs text-[#8083A3]">Phone</h3>
+            </li>
+            <li class="py-3 pl-3">
+              <h2 class="text-sm font-bold">Information technology</h2>
+              <h3 class="text-xs text-[#8083A3]">Job Functions</h3>
+            </li>
+          </ul>
+          <p class="text-sm text-[#8083A3] py-6">
+            My new car is sexy. Melbourne Red color, interior is nice. I enjoy
+            changing the ambiance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% comment "d" %}
+    <div class="pt-6 px-36 pb-12 items-center">
+      <img src="{% static 'images/84x84.png' %}" alt="" class="inline" />
+      <div class="inline pl-3">
+        <div class="inline">
+          <h1 class="font-bold text-2xl inline">Praskovya Dubinina</h1>
+        </div>
+        <p class="inline">Eliassen Group Inc.</p>
+        <p class="inline"></p>
+        <p class="inline">UI/UX Designer</p>
+      </div>
+    </div>
+    {% endcomment %}
+  </div>
+</div>
+{% endblock body %} {% comment "" %}
+<div class="p-6 max-w-sm rounded-lg border border-gray-200">
+  <img
+    src="{% static 'images/dropbox.png' %}"
+    alt=""
+    style="height: 64px; width: 64px"
+  />
+  <a href="#">
+    <h5 class="mb-2 font-bold">Crisis Invervantion Specialist</h5>
+  </a>
+  <p class="mb-3 text-sm text-gray-500 inline">London</p>
+  <p class="mb-3 text-sm text-gray-500 inline">•</p>
+  <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
+  <h4 class="py-8 font-bold text-sm items-center px-6">
+    $50k - $55k per month
+  </h4>
+</div>
+{% endcomment %}
