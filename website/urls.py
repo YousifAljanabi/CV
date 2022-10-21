@@ -15,4 +15,5 @@ urlpatterns = [
     path('job_search', views.job_search, name="job_search"),
     path('user_profile', views.user_profile, name="user_profile"),
     path('jobs_list', views.jobs_list, name="jobs_list"),
+    path('employee_list', views.employee_list, name="employee_list"),
 ]

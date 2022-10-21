@@ -95,3 +95,6 @@ def user_profile(request):
 
 def jobs_list(request):
     return render(request, "website/jobs_list.html")
+
+def employee_list(request):
+    return render(request, "website/employee_list.html")

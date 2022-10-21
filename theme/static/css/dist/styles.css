@@ -858,6 +858,14 @@ select {
   grid-column: span 1 / span 1;
 }
 
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+
+.col-span-11 {
+  grid-column: span 11 / span 11;
+}
+
 .float-left {
   float: left;
 }
@@ -1059,6 +1067,10 @@ select {
 
 .grid-cols-9 {
   grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -1515,6 +1527,18 @@ select {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pr-24 {
+  padding-right: 6rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .text-center {
