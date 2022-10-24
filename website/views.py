@@ -41,8 +41,6 @@ def user_login(request):
         if user is not None:
             user_type = user.user_type
             login(request, user)
-            if user_login(request):
-                pass
             return HttpResponseRedirect(reverse("index"))
         else:
             return render(request, "website/login.html", {
@@ -60,6 +58,7 @@ def signup(request):
 
 def create_account(request):
     if request.method == "POST":
+
         username = request.POST["username"]
         email = request.POST["email"]
         # name = request.POST["name"]
@@ -101,6 +100,11 @@ def create_account(request):
         return render(request, SIGNUP_PAGE)
 
 
+def signout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse("index"))
+
+
 def job_details(request):
     return render(request, "website/job.html")
 
@@ -111,8 +115,11 @@ def companyProfile(request):
 def job_search(request):
     return render(request, "website/job_search.html")
 
-def user_profile(request):
-    return render(request, "website/user_profile.html")
+def user_profile(request, userID):
+    user = User.objects.get(id=userID)
+    return render(request, "website/user_profile.html",{
+        'user' : user,
+    })
 
 def jobs_list(request):
     return render(request, "website/jobs_list.html")
