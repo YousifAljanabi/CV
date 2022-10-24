@@ -31,6 +31,7 @@
                 >
                     {% csrf_token %}
                     <div id="form-details">
+                        <input type="hidden" name="user_type" value="{{type}}">
                         <label for="email" class="block mb-2 text-sm font-medium"
                         >Your email</label
                         >
