@@ -61,8 +61,9 @@ def create_account(request):
 
         username = request.POST["username"]
         email = request.POST["email"]
-        # name = request.POST["name"]
-        # phone = request.POST["phone"]
+        fname = request.POST["fname"]
+        lname = request.POST["lname"]
+        phone = request.POST["phone"]
         # Ensure password matches confirmation
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
@@ -87,7 +88,7 @@ def create_account(request):
 
         # Attempt to create new user
         try:
-            user = User.objects.create_user(username, email, password)
+            user = User.objects.create_user(username, email= email, password = password, phone_number = phone, first_name = fname, last_name = lname)
             user.user_type = user_type
             user.save()
         except IntegrityError:
