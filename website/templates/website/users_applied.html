@@ -1,0 +1,161 @@
+{% extends 'website/layout.html' %}{% block navbar %}{% endblock navbar %}
+{%load static %} {% block body %}
+<div class="grid grid-cols-5 gap-4">
+  <div class="px-12 max-w-sm h-full">
+    <img
+      src="{% static 'images/logo.png' %}"
+      alt=""
+      style="height: 40px; width: 40px"
+    />
+    <div class="" style="padding-top: 40px">
+      <ul class="text-[#8083A3] font-bold text-sm">
+        <a href="">
+          <li class="px-12 py-4">Dashboard</li>
+        </a>
+        <li class="font-normal py-4">Employee finder</li>
+        <a href="">
+          <li class="px-12 py-4">Search</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4 text-black">Employees</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Calls</li>
+        </a>
+        <li class="font-normal py-4">Manage listings</li>
+        <a href="">
+          <li class="px-12 py-4">Listings</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Calendar</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Post Updates</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Analytics</li>
+        </a>
+      </ul>
+    </div>
+    <div class="">
+      <ul class="text-[#8083A3] font-bold text-sm">
+        <a href="">
+          <li class="px-12 py-4">Help Center</li>
+        </a>
+        <a href="">
+          <li class="px-12 py-4">Settings</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="col-span-4">
+    <div class="pt-6 px-36 pb-12">
+      <ul class="flex justify-between items-center">
+        <li class="inline">
+          <a href="">
+            <h1 class="font-bold text-sm inline">Back to results</h1>
+          </a>
+        </li>
+        <li class="inline items-center">
+          <button
+            type="submit"
+            class="w-full font-medium rounded-3xl text-sm px-5 py-2.5 text-center bg-[#1DA1F2] text-white"
+          >
+            Post a Job
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="px-36">
+      <div class="relative text-center text-white">
+        <img src="{% static 'images/968x216bg.png' %}" alt="" />
+        <div class="absolute top-12 w-full">
+          <h1 class="font-bold text-5xl">648 Available Jobs</h1>
+          <p class="pt-4">
+            When you’re searching for a job, there are a few things you can do
+          </p>
+          <p>to get the most out of your search</p>
+        </div>
+      </div>
+      <div class="relative w-full pt-6">
+        <div class="absolute bottom-0 flex w-full items-center justify-center">
+          <form
+            action=""
+            class="max-w-2xl w-full flex justify-center items-center border rounded-3xl"
+            style="background: rgb(255, 255, 255)"
+          >
+            {% csrf_token %}
+            <button type="sumbit" class="" style="padding-left: 8px">
+              <img src="{% static 'images/search.png' %}" alt="" />
+            </button>
+            <input
+              type="text"
+              placeholder="Job title, keyword or company"
+              class="outline-0 border-0 text-sm font-bold text-[#8083A3] w-full"
+              style="
+                outline: none;
+                border: 0;
+                flex: 1;
+                background: transparent;
+                padding: 18px 18px;
+              "
+            />
+            <h1 class="font-bold text-sm pr-10">Any Location</h1>
+          </form>
+        </div>
+      </div>
+      <div class="w-full px-60 pt-6 pb-6 text-center">
+        <ul class="font-bold text-xs">
+          <a href="">
+            <li class="inline px-8">Date Posted</li>
+          </a>
+          <a href="">
+            <li class="inline px-8">Experience</li>
+          </a>
+          <a href="">
+            <li class="inline px-8">Company</li>
+          </a>
+          <a href="">
+            <li class="inline px-8">Job Type</li>
+          </a>
+        </ul>
+      </div>
+      {% for user in applicants %}
+      <div class="pl-12 pr-24 py-6">
+        <div class="grid grid-cols-12 gap-4">
+          <div>
+            <img src="{% static 'images/48x48.png' %}" alt="" />
+          </div>
+          <div class="col-span-11">
+            <div class="flex justify-between items-center">
+              <div>
+                <a href="{% url 'user_profile' user.id %}">
+                  <h1 class="text-md font-bold">{{user.first_name}} {{user.last_name}}</h1>
+                </a>
+                <p class="mb-3 text-sm inline">London</p>
+                <p class="mb-3 text-sm inline">•</p>
+                <p class="mb-3 text-sm inline">Sales manager</p>
+              </div>
+              <div>
+                <h4 class="text-sm">Eliassen Group</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      
+      <div class="flex justify-center">
+        <ul class="inline-flex space-x-2 pt-8">
+            <li><button class="w-10 h-10 transition-colors duration-150 ">1</button></li>
+            <li><button class="w-10 h-10 text-white transition-colors duration-150 bg-[#1DA1F2] border border-r-0 border-[#1DA1F2] rounded-full focus:shadow-outline">2</button></li>
+            <li><button class="w-10 h-10 transition-colors duration-150 ">3</button></li>
+            <li><button class="w-10 h-10 transition-colors duration-150 ">4</button></li>
+            <li><button class="w-10 h-10 transition-colors duration-150 ">5</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

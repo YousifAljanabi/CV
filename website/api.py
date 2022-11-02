@@ -148,6 +148,10 @@ class UserTypeApi:
         return UserType.objects.get(id=user_type_id)
 
     @staticmethod
+    def get_by_name(user_type_name):
+        return UserType.objects.get(name=user_type_name)
+
+    @staticmethod
     def all():
         return UserType.objects.all()
 

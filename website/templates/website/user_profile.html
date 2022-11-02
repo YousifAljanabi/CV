@@ -1,12 +1,21 @@
-{% extends 'website/layout.html' %}{% block navbar %}{% endblock navbar %}
+{% extends 'website/layout.html' %}
+{% load static %}
+{% block navbar %}{% endblock navbar %}
+{% block link %}
+<script src="{% static 'js/edit.js' %}"></script>
+{% endblock link %}
+
+
 {%load static %} {% block body %}
 <div class="grid grid-cols-5 gap-4">
   <div class="px-12 max-w-sm h-full">
-    <img
+    <a href="{% url 'index' %}">
+      <img
       src="{% static 'images/logo.png' %}"
       alt=""
       style="height: 40px; width: 40px"
     />
+    </a>
     <div class="" style="padding-top: 40px">
       <ul class="text-[#8083A3] font-bold text-sm">
         <a href="">
@@ -72,7 +81,7 @@
       </div>
       <div class="col-span-6">
         <div class="pl-3">
-          <h1 class="font-bold text-2xl">Praskovya Dubinina</h1>
+          <h1 class="font-bold text-2xl">{{user.first_name}} {{user.last_name}}</h1>
           <p class="inline">Eliassen Group Inc.</p>
           <p class="inline"></p>
           <p class="inline">UI/UX Designer</p>
@@ -132,8 +141,16 @@
     <div class="pl-36 py-12 grid grid-cols-2 gap-4">
       <div>
         <div>
+          {% if request.user == user %}
+          <div class="flex justify-between items-center text-center">
+            <h1 class="font-bold text-lg">Short bio</h1>
+            {% comment "TODO" %}{% endcomment %}
+            <button class="text-sm" id="edit-button" onclick="editBio()">Edit</button>
+          </div>
+          {% else %}
           <h1 class="font-bold text-lg">Short bio</h1>
-          <p class="text-sm py-0.5">
+          {% endif %}
+          <p class="text-sm py-0.5" id="bio">
             Once your resume is on Indeed, you can choose to make it “Public” or
             “Private.” There are benefits to both options. When you make your
             resume public, it is visible to anyone. Visitors to a public resume
@@ -141,20 +158,26 @@
             through a secure contact form.
           </p>
           <ul class="text-[#8083A3] text-sm font-bold py-4">
+            {% for skill in skills %}{% endfor %} {% comment "Todo" %}{% endcomment %}
             <li class="inline px-6 py-1">Business</li>
             <li class="inline px-6 py-1">Marketing</li>
             <li class="inline px-6 py-1">Development</li>
             <li class="inline px-6 py-1">Founder</li>
             <li class="inline px-6 py-1">HTML</li>
-            <div class="py-2"></div>
-            <li class="inline px-6 py-1">Interface Design</li>
-            <li class="inline px-6 py-1">University</li>
-            <li class="inline px-6 py-1">Entrepreneur</li>
           </ul>
         </div>
 
         <div class="py-6">
+          {% if request.user == user %}
+          <div class="flex justify-between items-center text-center">
+            <h1 class="font-bold text-lg">Work experience</h1>
+            {% comment "TODO" %}{% endcomment %}
+            <button class="text-sm" id="edit-button" onclick="addWork()">Add</button>
+          </div>
+          {% else %}
           <h1 class="font-bold text-lg">Work experience</h1>
+          {% endif %}
+          
         </div>
         <div class="py-6 px-3">
           <div class="grid grid-cols-8 gap-4">
@@ -291,11 +314,11 @@
           <p class="text-sm py-2">Avg. salary</p>
           <ul>
             <li class="py-3 pl-3">
-              <h2 class="text-sm font-bold">hoangle@yahoo.com</h2>
+              <h2 class="text-sm font-bold">{{user.email}}</h2>
               <h3 class="text-xs text-[#8083A3]">Contact Email</h3>
             </li>
             <li class="py-3 pl-3">
-              <h2 class="text-sm font-bold">+64 456 869 393</h2>
+              <h2 class="text-sm font-bold">{{user.phone_number}}</h2>
               <h3 class="text-xs text-[#8083A3]">Phone</h3>
             </li>
             <li class="py-3 pl-3">

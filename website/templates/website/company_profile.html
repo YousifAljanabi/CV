@@ -2,17 +2,23 @@
 
 <div class="flex flex-wrap justify-center px-60 py-8">
   <div class="relative mx-auto">
-    <img src="{% static 'images/1024x312.png' %}" alt="" />
+    <img src="https://pbs.twimg.com/profile_banners/74286565/1665770526/1500x500" alt="" 
+    style="width:1024px;
+    height:312px;"
+    />
     <img
-      src="{% static 'images/dropbox.png' %}"
+      src="{{user.avatar_url}}"
       alt=""
       class="absolute top-64"
-      style="right:470px ;"
+      style="right:470px ;
+      width:92px;
+      height:92px;
+      "
       
     />
   </div>
   <div class="text-center pt-20 w-full">
-    <h1 class="font-bold text-3xl">Dropbox</h1>
+    <h1 class="font-bold text-3xl">{{user.first_name}}</h1>
     <h2>On a mission to make your working life simpler</h2>
     <p class="text-[#8083A3] text-sm">Los Angeles, USA ● Computer Software</p>
   </div>
@@ -79,7 +85,7 @@
             <div class="text-sm text-[#8083A3] inline">
               <p class="inline">London</p>
               <p class="inline">•</p>
-              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">{{user.first_name}} {{user.last_name}}.</p>
               <p class="inline">•</p>
               <p class="inline">Full-Time</p>
             </div>
@@ -89,7 +95,7 @@
             <div class="text-sm text-[#8083A3] inline">
               <p class="inline">New York</p>
               <p class="inline">•</p>
-              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">{{user.first_name}} {{user.last_name}}.</p>
               <p class="inline">•</p>
               <p class="inline">Remotely</p>
             </div>
@@ -99,7 +105,7 @@
             <div class="text-sm text-[#8083A3] inline">
               <p class="inline">Washington</p>
               <p class="inline">•</p>
-              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">{{user.first_name}} {{user.last_name}}.</p>
               <p class="inline">•</p>
               <p class="inline">Full-Time</p>
             </div>
@@ -109,7 +115,7 @@
             <div class="text-sm text-[#8083A3] inline">
               <p class="inline">Berlin</p>
               <p class="inline">•</p>
-              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">{{user.first_name}} {{user.last_name}}.</p>
               <p class="inline">•</p>
               <p class="inline">Remotely</p>
             </div>
@@ -119,7 +125,7 @@
             <div class="text-sm text-[#8083A3] inline">
               <p class="inline">San Francisco</p>
               <p class="inline">•</p>
-              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">{{user.first_name}} {{user.last_name}}.</p>
               <p class="inline">•</p>
               <p class="inline">Remotely</p>
             </div>
@@ -129,7 +135,7 @@
             <div class="text-sm text-[#8083A3] inline">
               <p class="inline">San Francisco</p>
               <p class="inline">•</p>
-              <p class="inline">Dropbox Inc.</p>
+              <p class="inline">{{user.first_name}} {{user.last_name}}.</p>
               <p class="inline">•</p>
               <p class="inline">Remotely</p>
             </div>
@@ -157,7 +163,7 @@
               <h3 class="text-xs text-[#8083A3]">Job Functions</h3>
             </li>
             <li class="py-3 pl-3">
-              <h2 class="text-sm font-bold">jobs@microsoft.com</h2>
+              <h2 class="text-sm font-bold">{{user.email}}</h2>
               <h3 class="text-xs text-[#8083A3]">Contact Email</h3>
             </li>
           </ul>
@@ -171,7 +177,7 @@
       <h1 class="text-xl font-bold w-full">About company</h1>
       <div>
         <div class="align-middle py-6">
-          <h2 class="w-full font-bold text-sm">Dropbox</h2>
+          <h2 class="w-full font-bold text-sm">{{user.first_name}}</h2>
           <p class="text-[#8083A3] text-xs">14,056,752 followers</p>
         </div>
       </div>
@@ -186,7 +192,7 @@
       <h1 class="text-sm font-bold w-full py-8">Latest Activity</h1>
       <div class="grid grid-cols-2 gap-4">
         <div class="pb-1.5">
-          <h5 class="inline text-xs font-bold">Dropbox</h5>
+          <h5 class="inline text-xs font-bold">{{user.first_name}}</h5>
 
           <a
             href="#"
@@ -211,7 +217,7 @@
           </a>
         </div>
         <div class="pb-1.5">
-            <h5 class="inline text-xs font-bold">Dropbox</h5>
+            <h5 class="inline text-xs font-bold">{{user.first_name}}</h5>
   
             <a
               href="#"
