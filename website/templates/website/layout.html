@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    {% block link %}{% endblock link %} {% block script %}{% endblock %} {% tailwind_css %}
+    {% block link %}{% endblock link %} {% block script %}{% endblock %} {%tailwind_css %}
   </head>
   <body class="font-inter">
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
@@ -62,6 +62,24 @@
             class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0"
           >
             <li>
+              {% if currentPage == 'home' %}
+              <a
+                href="{% url 'index' %}"
+                class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0"
+              >
+                Home
+              </a>
+              {% else %}
+              <a
+                href="{% url 'index' %}"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Home
+              </a>
+              {% endif %}
+            </li>
+            <li>
+              {% if currentPage == 'job_search' %}
               <a
                 href="{% url 'job_search' %}"
                 class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0"
@@ -69,29 +87,42 @@
               >
                 Find Jobs
               </a>
-            </li>
-            <li>
+              {% else %}
               <a
-                href="#"
+                href="{% url 'job_search' %}"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                aria-current="page"
               >
-                People
+                Find Jobs
               </a>
+              {% endif %}
             </li>
+
             <li>
+              {% if currentPage == 'jobs_list' %}
               <a
-                href="#"
-                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                href="{% url 'jobs_list' %}"
+                class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0"
+                aria-current="page"
               >
-                Education
+                Jobs List
               </a>
+              {% else %}
+              <a
+                href="{% url 'jobs_list' %}"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                aria-current="page"
+              >
+              Jobs List
+              </a>
+              {% endif %}
             </li>
             <li>
               <a
                 href="#"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Blog
+                Other
               </a>
             </li>
           </ul>
@@ -102,16 +133,19 @@
             class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0"
           >
             <a href="{% url 'user_profile' user.id %}" class="">
-                <li>
-                    <h1 class="font-bold">{{user.username}}</h1>
-                </li> 
-            </a>   
-            <a href="{% url 'signout' %}" class='block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0'>
-                <li>
-                    <h1 class="font-bold">Sign out</h1>
-                </li>
+              <li>
+                <h1 class="font-bold">{{user.username}}</h1>
+              </li>
             </a>
-        </ul>
+            <a
+              href="{% url 'signout' %}"
+              class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0"
+            >
+              <li>
+                <h1 class="font-bold">Sign out</h1>
+              </li>
+            </a>
+          </ul>
           {% else %}
           <ul
             class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0"

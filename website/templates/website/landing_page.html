@@ -56,56 +56,29 @@
         <a href="">See all jobs</a>
       </div>
     </div>
+    
     <div class="grid grid-cols-3 gap-4 py-14">
+      {% for job in jobs %}
       <div class="p-6 max-w-sm rounded-lg border border-gray-200">
         <img
-          src="{% static 'images/dropbox.png' %}"
+          src={{job.company.avatar_url}}
           alt=""
-          style="height: 64px; width: 64px"
+          style="height: 32px; width: 32px"
         />
-        <a href="#">
-          <h5 class="mb-2 font-bold">Crisis Invervantion Specialist</h5>
+        <a href="job/{{job.id}}">
+          <h5 class="mb-2 font-bold">{{job.title}}</h5>
         </a>
         <p class="mb-3 text-sm text-gray-500 inline">London</p>
         <p class="mb-3 text-sm text-gray-500 inline">•</p>
-        <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
+        <p class="mb-3 text-sm text-gray-500 inline">{{job.company.first_name}}</p>
         <h4 class="py-8 font-bold text-sm items-center px-6">
           $50k - $55k per month
         </h4>
       </div>
-      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
-        <img
-          src="{% static 'images/dropbox.png' %}"
-          alt=""
-          style="height: 64px; width: 64px"
-        />
-        <a href="#">
-          <h5 class="mb-2 font-bold">Crisis Invervantion Specialist</h5>
-        </a>
-        <p class="mb-3 text-sm text-gray-500 inline">London</p>
-        <p class="mb-3 text-sm text-gray-500 inline">•</p>
-        <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
-        <h4 class="py-8 font-bold text-sm items-center px-6">
-          $50k - $55k per month
-        </h4>
-      </div>
-      <div class="p-6 max-w-sm rounded-lg border border-gray-200">
-        <img
-          src="{% static 'images/dropbox.png' %}"
-          alt=""
-          style="height: 64px; width: 64px"
-        />
-        <a href="#">
-          <h5 class="mb-2 font-bold">Crisis Invervantion Specialist</h5>
-        </a>
-        <p class="mb-3 text-sm text-gray-500 inline">London</p>
-        <p class="mb-3 text-sm text-gray-500 inline">•</p>
-        <p class="mb-3 text-sm text-gray-500 inline">Dropbox</p>
-        <h4 class="py-8 font-bold text-sm items-center px-6">
-          $50k - $55k per month
-        </h4>
-      </div>
+      {% endfor %}
+      
     </div>
+    
     <div class="grid grid-cols-2 w-full items-center">
       <div class="w-full font-bold text-3xl">
         <h1>Top level freelancers</h1>
@@ -179,6 +152,7 @@
       </div>
     </div>
 
+    
     <div class="py-8 relative text-white">
       <img src="{% static 'images/1140x218bg.png' %}" alt="" class="" />
       <div class="grid grid-cols-2 gap-4">
@@ -191,15 +165,17 @@
           </p>
         </div>
         <div class="text-black absolute top-24 right-14 pt-4">
-          <button
-            type="submit"
+          <a href="{% url 'signup' %}">
+            <button
             class="w-full font-medium rounded-3xl text-sm px-14 py-3 text-center bg-[#1DA1F2] text-white"
           >
             Start Today
           </button>
+          </a>
         </div>
       </div>
     </div>
+        
   </div>
 </div>
 
